@@ -7,7 +7,7 @@ router.get('/', function(req, res, next) {
 });
 /* Страница протеина */
 router.get('/protein', function(req, res, next) {
-    res.send("<h1>Страница протеина</h1>")
+    res.send("<h1>Страница протина</h1>")
 });
 /* Страница бета-аланина */
 router.get('/beta-alanine', function(req, res, next) {
