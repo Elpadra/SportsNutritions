@@ -1,13 +1,15 @@
 var mongoose = require('mongoose')
-mongoose.connect('mongodb://127.0.0.1:27017/test1')
+mongoose.connect('mongodb://localhost/test')
 
-var nutrition = mongoose.model('nutrition', { name: String })
+var schema = mongoose.Schema({ name: String })
 
-var ber = new nutrition({ name: 'Бета' })
-ber.save(function (err) {
-    if (err) {
-        console.log(err)
-    } else {
-        console.log('пшш')
-    }
+schema.methods.meow = function(){
+    console.log(this.get("name") + " сказал пшш")
+}
+
+var ber = mongoose.model('ber', schema)
+
+var prot = new ber({ name: 'протеин' })
+prot.save(function (err) {
+    prot.meow()
 })
