@@ -3,7 +3,7 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+res.render('index', { title: 'Express' });
 });
 
 /* Страница протеина */
@@ -22,8 +22,6 @@ router.get('/beta-alanine', function(req, res, next) {
         desc: "Бета-аланин - биологически активная добавка к пище, дополнительный источник витамина D3, фолиевой кислоты, изофлавонов, содержащая бета-аланин."
     })
 });
-
-
 /* Страница аминокислоты */
 router.get('/bcaa', function(req, res, next) {
     res.render('Nutritions', {
